@@ -418,74 +418,100 @@ body{
 /* ==========================================
    MOBILE RESPONSIVE
 ========================================== */
-@media (max-width: 768px){
+@media screen and (max-width:768px){
 
     body{
         overflow-x:hidden;
     }
 
+    /* ---------- TITLES ---------- */
+
     h1{
-        font-size:32px !important;
+        font-size:clamp(32px,9vw,46px) !important;
         text-align:center;
-    }
-
-    h2{
-        font-size:24px !important;
-        text-align:center;
-    }
-
-    p{
-        font-size:18px !important;
-        text-align:center;
+        line-height:1.1;
         padding:0 15px;
     }
 
+    h2{
+        font-size:clamp(20px,6vw,30px) !important;
+        text-align:center;
+        line-height:1.2;
+    }
+
+    p{
+        font-size:17px !important;
+        text-align:center;
+        padding:0 20px;
+        line-height:1.6;
+    }
+
+    /* ---------- IMAGES ---------- */
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
     #gift{
-        width:180px;
+        width:170px;
+        max-width:65vw;
     }
 
     #cake{
-        width:240px;
+        width:220px;
+        max-width:75vw;
     }
 
     #envelope{
-        width:180px;
+        width:170px;
+        max-width:65vw;
     }
+
+    /* ---------- CONTENT ---------- */
 
     .content{
-        gap:15px;
-        transform:none;
+        width:100%;
+        gap:18px;
         padding:20px;
+        transform:none;
     }
 
+    /* ---------- LETTER ---------- */
+
     #letter{
-        width:90%;
+        width:92%;
+        max-width:430px;
         padding:20px;
-        margin:20px;
+        margin:20px auto;
     }
 
     #typing{
         font-size:16px;
-        line-height:1.6;
+        line-height:1.7;
     }
+
+    /* ---------- BUTTON ---------- */
 
     #nextBtn{
         width:220px;
+        max-width:85%;
         font-size:18px;
         padding:14px 20px;
     }
 
+    /* ---------- LOADING SCREEN ---------- */
+
     #loadingScreen h1{
-        font-size:34px !important;
+        font-size:clamp(28px,8vw,40px) !important;
     }
 
     #loadingScreen h2{
-        font-size:24px !important;
+        font-size:clamp(20px,6vw,28px) !important;
     }
 
     .heart{
-        font-size:40px;
+        font-size:42px;
     }
 
 }
-
