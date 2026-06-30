@@ -414,3 +414,78 @@ body{
     }
 
 }
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+@media (max-width: 768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    h1{
+        font-size:32px !important;
+        text-align:center;
+    }
+
+    h2{
+        font-size:24px !important;
+        text-align:center;
+    }
+
+    p{
+        font-size:18px !important;
+        text-align:center;
+        padding:0 15px;
+    }
+
+    #gift{
+        width:180px;
+    }
+
+    #cake{
+        width:240px;
+    }
+
+    #envelope{
+        width:180px;
+    }
+
+    .content{
+        gap:15px;
+        transform:none;
+        padding:20px;
+    }
+
+    #letter{
+        width:90%;
+        padding:20px;
+        margin:20px;
+    }
+
+    #typing{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    #nextBtn{
+        width:220px;
+        font-size:18px;
+        padding:14px 20px;
+    }
+
+    #loadingScreen h1{
+        font-size:34px !important;
+    }
+
+    #loadingScreen h2{
+        font-size:24px !important;
+    }
+
+    .heart{
+        font-size:40px;
+    }
+
+}
+
