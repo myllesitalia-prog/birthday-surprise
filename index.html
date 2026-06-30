@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Gift For You</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <div id="loadingScreen">
+    <div class="loading-content">
+
+        <h1>A Special Surprise</h1>
+        <h2>Is Loading...</h2>
+        <div class="heart">❤️</div>
+
+        <p>Made only for you.</p>
+
+    </div>
+</div>
+    
+<div id="page1">
+
+
+    <h1>I Have A Gift For You</h1>
+
+    <img
+        id="gift"
+        src="images/gift.png"
+        alt="Gift Box">
+   
+   
+    <p>Click the gift to open it.</p>
+
+    </div>
+   
+<div id="page2" style="display:none;">
+
+    <div class="content">
+
+        <h1>HAPPY BIRTHDAY, Ayieza!</h1>
+
+       <canvas id="fireworks"></canvas>
+
+        <img id="cake" src="images/cake.png" alt="Cake">
+
+        <p>I hope this simple gift makes you happy </p>
+        <button id="nextBtn">Open Your Letter 💌</button>
+
+    </div>
+
+</div>
+
+<div id="page3" style="display:none;">
+
+    <h1>You've Received A Letter</h1>
+
+    <img id="envelope" src="images/envelope.png" alt="Envelope">
+
+    <p>Click the envelope.</p>
+
+</div>
+
+<div id="page4" style="display:none;">
+
+    <div id="letter">
+        <h2>💌 Dear Ayieza,</h2>
+
+        <p id="typing"></p>
+    </div>
+
+</div>
+ 
+<audio id="surpriseSound" src="music/surprise.mp3"></audio>
+<audio id="birthdayMusic" src="music/birthday.mp3" loop></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,416 @@
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================
+   BODY
+=========================== */
+body{
+    font-family:Arial, sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url("images/background.png") center/cover no-repeat;
+    overflow:hidden;
+}
+
+/* ===========================
+   PAGE SETTINGS
+=========================== */
+#page1,
+#page2,
+#page3,
+#page4{
+    width:100%;
+    height:100vh;
+}
+
+/* ===========================
+   PAGE 1
+=========================== */
+
+#page1{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+   #page1 h1{
+    color:#fff;
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+#page1 p{
+    color:#fff;
+    font-size:22px;
+    margin-top:20px;
+}
+
+#gift{
+    width:250px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#gift:hover{
+    transform:scale(1.1);
+}
+
+/* ===========================
+   PAGE 2
+=========================== */
+
+#page2{
+    display:none;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+
+    background:url("images/background2.png") center/cover no-repeat;
+}
+
+.content{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:25px;
+}
+
+.content h1{
+    color:#fff;
+    font-size:60px;
+    text-align:center;
+}
+
+.content p{
+    color:#fff;
+    font-size:24px;
+    text-align:center;
+}
+
+#cake{
+    width:420px;
+    animation:cakePop .8s ease,
+             floating 3s ease-in-out infinite;
+}
+
+#fireworks{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+/* ===========================
+   PAGE 3
+=========================== */
+
+#page3{
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    background:url("images/background3.png") center/cover no-repeat;
+}
+
+#page3 h1{
+    color:white;
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+#page3 p{
+    color:white;
+    font-size:22px;
+    margin-top:20px;
+}
+
+#envelope{
+    width:250px;
+    cursor:pointer;
+
+    opacity:0;
+    animation:popEnvelope .6s forwards;
+}
+
+/* ===========================
+   PAGE 4
+=========================== */
+
+#page4{
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    background:url("images/background4.png") center/cover no-repeat;
+}
+
+#letter{
+    width:700px;
+    background:white;
+    color:#333;
+
+    padding:40px;
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+#letter h2{
+    margin-bottom:20px;
+}
+
+#typing{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+#nextBtn{
+    margin-top:20px;
+
+    padding:15px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#ff69b4;
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+#nextBtn:hover{
+    background:#ff4da6;
+    transform:scale(1.08);
+}
+
+/* ===========================
+   PAGE ANIMATIONS
+=========================== */
+
+.fade-in{
+    animation:fadeIn .6s forwards;
+}
+
+.fade-out{
+    animation:fadeOut .6s forwards;
+}
+
+.slide-up{
+    animation:slideUp .6s forwards;
+}
+
+.slide-down{
+    animation:slideDown .6s forwards;
+}
+
+/* ===========================
+   OBJECT ANIMATIONS
+=========================== */
+
+@keyframes cakePop{
+    from{
+        opacity:0;
+        transform:scale(.2);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes floating{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes popEnvelope{
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(100%);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideDown{
+    from{
+        opacity:1;
+        transform:translateY(0);
+    }
+    to{
+        opacity:0;
+        transform:translateY(-100%);
+    }
+}
+
+@keyframes sparkle{
+    0%{
+        opacity:0;
+        transform:scale(.2);
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-40px) scale(1.5);
+    }
+}
+
+/* ===========================
+   SPARKLES
+=========================== */
+
+.sparkle{
+    position:absolute;
+
+    color:#fff8b0;
+    font-size:20px;
+
+    pointer-events:none;
+
+    z-index:3;
+
+    animation:sparkle 2s linear forwards;
+}
+
+/* ===========================
+   LOADING SCREEN
+=========================== */
+
+#loadingScreen{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:#ffb6d9;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.loading-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.loading-content h1{
+    font-size:60px;
+    margin:0;
+}
+
+.loading-content h2{
+    font-size:45px;
+    margin:15px 0;
+    font-weight:normal;
+}
+
+.heart{
+    font-size:70px;
+    margin:15px 0;
+
+    animation:heartbeat 1.2s infinite;
+}
+
+.loading-content p{
+    font-size:22px;
+    margin-top:30px;
+    opacity:.9;
+}
+
+@keyframes heartbeat{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
