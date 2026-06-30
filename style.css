@@ -161,23 +161,20 @@ body{
 
 #page4{
     display:none;
+
+    width:100%;
+    height:100vh;
+
+    background-image:url("images/background4.png");
+    background-size:cover;
+    background-position:center;
+
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
 
-    background:url("images/background4.png") center/cover no-repeat;
+    overflow-y:auto;
+    padding:20px;
 }
-
-#letter{
-    width:700px;
-    background:white;
-    color:#333;
-
-    padding:40px;
-    border-radius:20px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.3);
-}
-
 #letter h2{
     margin-bottom:20px;
 }
@@ -479,25 +476,30 @@ body{
 
     /* ---------- LETTER ---------- */
 
+    #page4{
+    align-items:flex-start;
+    overflow-y:auto;
+    padding:20px;
+
+    }
+
     #letter{
-        width:92%;
-        max-width:430px;
-        padding:20px;
-        margin:20px auto;
+       width:92%;
+       max-width:430px;
+       padding:20px;
+       margin:20px auto;
+
+    max-height:85vh;
+    overflow-y:auto;
+
     }
 
     #typing{
-        font-size:16px;
-        line-height:1.7;
-    }
+       font-size:16px;
+       line-height:1.8;
+       word-wrap:break-word;
+       overflow-wrap:break-word;
 
-    /* ---------- BUTTON ---------- */
-
-    #nextBtn{
-        width:220px;
-        max-width:85%;
-        font-size:18px;
-        padding:14px 20px;
     }
 
     /* ---------- LOADING SCREEN ---------- */
